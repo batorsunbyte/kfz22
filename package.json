@@ -1,7 +1,9 @@
 {
-  "name": "automotive-repair-website",
+  "name": "kfz22-website",
   "version": "1.0.0",
   "private": true,
+  "description": "KFZ-Werkstatt-Webseite für Kfz 22 (Wien 22.) - gebaut von Sunbyte",
+  "author": "Sunbyte / Zakir Daryabi",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
