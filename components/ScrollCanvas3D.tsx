@@ -173,7 +173,7 @@ export default function ScrollCanvas3D() {
                                 <a
                                     href="#pricing"
                                     className="absolute -top-5 -right-2 sm:-top-7 sm:-right-4 lg:-top-9 lg:-right-6 z-50 group/offer block"
-                                    aria-label={`${t.hero.special} ${t.hero.offer}`}
+                                    aria-label={t.hero.specialOffer}
                                 >
                                     <div className="relative">
                                         {/* Pulsing gold glow halo */}
@@ -194,14 +194,11 @@ export default function ScrollCanvas3D() {
                                                 </svg>
 
                                                 <div className="flex flex-col leading-none">
-                                                    <span className="text-[9px] lg:text-[10px] font-black text-[#1e293b]/70 uppercase tracking-[0.25em] mb-1">
-                                                        {t.hero.offer}
+                                                    <span className="text-[#1e293b] font-black text-sm lg:text-lg tracking-tight uppercase whitespace-nowrap">
+                                                        {t.hero.specialOffer}
                                                     </span>
-                                                    <span className="text-[#1e293b] font-black text-lg lg:text-2xl tracking-tighter uppercase whitespace-nowrap">
-                                                        {t.hero.special}
-                                                    </span>
-                                                    <span className="text-[8px] lg:text-[9px] font-black text-[#1e293b]/80 uppercase tracking-widest mt-1 inline-flex items-center gap-1">
-                                                        Zu den Preisen
+                                                    <span className="text-[8px] lg:text-[9px] font-black text-[#1e293b]/80 uppercase tracking-widest mt-1.5 inline-flex items-center gap-1 whitespace-nowrap">
+                                                        {t.hero.viewPrices}
                                                         <svg className="w-2.5 h-2.5 lg:w-3 lg:h-3 group-hover/offer:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
                                                             <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                                         </svg>

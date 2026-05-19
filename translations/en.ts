@@ -24,6 +24,8 @@ const en: Translations = {
         loading: 'Loading...',
         special: 'SPECIAL',
         offer: 'OFFER',
+        specialOffer: 'SPECIAL OFFER',
+        viewPrices: 'View prices',
         callNow: 'Call now',
         callNowShort: 'Call',
         phoneNumber: '+43 1 2561822',

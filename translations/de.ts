@@ -22,6 +22,8 @@ const de = {
         loading: 'Laden...',
         special: 'SONDER',
         offer: 'ANGEBOT',
+        specialOffer: 'SONDERANGEBOT',
+        viewPrices: 'Zu den Preisen',
         callNow: 'Jetzt anrufen',
         callNowShort: 'Anrufen',
         phoneNumber: '+43 1 2561822',

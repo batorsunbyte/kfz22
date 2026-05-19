@@ -22,6 +22,8 @@ export interface Translations {
         loading: string
         special: string
         offer: string
+        specialOffer: string
+        viewPrices: string
         callNow: string
         callNowShort: string
         phoneNumber: string

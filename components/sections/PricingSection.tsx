@@ -45,15 +45,6 @@ const pricingIcons = [
     ),
 ]
 
-const prices = [
-    { oldPrice: '120', newPrice: '79,90' },
-    { oldPrice: '55', newPrice: '39,90' },
-    { oldPrice: '198', newPrice: '139,90' },
-    { oldPrice: '90', newPrice: '59,90' },
-    { oldPrice: '17', newPrice: '11,90' },
-    { oldPrice: '698', newPrice: '419,90' },
-]
-
 export default function PricingSection() {
     const { t } = useTranslation()
 
@@ -121,21 +112,8 @@ export default function PricingSection() {
                                 })}
                             </div>
 
-                            {/* Bottom Row: Price & CTA */}
-                            <div className="mt-auto pt-4 border-t border-emerald-50/40 dark:border-slate-800/40 flex items-center justify-between">
-                                <div className="flex flex-col">
-                                    <div className="relative opacity-80 dark:opacity-60 origin-left h-4">
-                                        <span className="text-slate-400 dark:text-slate-500 text-[13px] font-extrabold tracking-tight">
-                                            {t.pricing.insteadOf} {prices[index].oldPrice}
-                                        </span>
-                                        <div className="absolute top-1/2 left-0 right-1 h-[1.5px] bg-red-500/50 transform -rotate-12" />
-                                    </div>
-                                    <div className="text-3xl font-black text-red-600/90 dark:text-red-500 tracking-tighter flex items-center">
-                                        <span className="text-sm font-bold mr-0.5 mt-0.5">&euro;</span>
-                                        {prices[index].newPrice}
-                                    </div>
-                                </div>
-
+                            {/* Bottom Row: CTA only */}
+                            <div className="mt-auto pt-4 border-t border-emerald-50/40 dark:border-slate-800/40 flex justify-center">
                                 <a
                                     href="tel:+4312561822"
                                     className="btn-modern-slim dark:bg-[#ffd100] dark:text-slate-950 dark:hover:bg-white flex items-center gap-2 min-h-[44px]"
