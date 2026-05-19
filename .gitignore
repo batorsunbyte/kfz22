@@ -1,0 +1,23 @@
+node_modules
+
+# Next.js build artefacts
+.next/
+out/
+tsconfig.tsbuildinfo
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local-only debug helpers
+.mobile-screenshots/
+
+# Local Claude Code permissions (per-machine, not per-repo)
+.claude/settings.local.json
+
+# Local env files
+.env
+.env.local
+.env.*.local

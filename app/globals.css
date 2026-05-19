@@ -1,0 +1,397 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light 3D Color Palette */
+  --bg-light: #f0f4f8;
+  --bg-white: #ffffff;
+  --bg-gradient-start: #e8f0fe;
+  --bg-gradient-end: #f8fafc;
+
+  --primary-accent: #059669;
+  --accent-orange: #ff6b35;
+  --accent-red: #ef4444;
+
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+
+  --shadow-color: rgba(5, 150, 105, 0.15);
+  --shadow-strong: rgba(0, 0, 0, 0.1);
+
+  /* Spacing */
+  --section-padding: 6rem;
+  --container-max: 1400px;
+  --hero-bg-gradient: radial-gradient(circle at top, #ffffff 0%, #f0f4f8 50%, #e1e8ed 100%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+  color: var(--text-dark);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  transition: background 0.5s ease;
+}
+
+.dark body {
+  background: #020617;
+  color: #f8fafc;
+  --hero-bg-gradient: radial-gradient(circle at top, #0f172a 0%, #020617 100%);
+}
+
+/* Modern Service Card - Elite & Balanced */
+.service-card-modern {
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 249, 255, 0.95) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  transition: all 0.5s cubic-bezier(0.2, 1, 0.2, 1);
+  border: 1px solid rgba(5, 150, 105, 0.08);
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.03),
+    0 4px 6px -2px rgba(0, 0, 0, 0.01);
+  transform-style: preserve-3d;
+  position: relative;
+  overflow: hidden;
+}
+
+.dark .service-card-modern {
+  background: linear-gradient(165deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%);
+  border-color: rgba(255, 209, 0, 0.1);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.service-card-modern:hover {
+  transform: translateY(-5px);
+  border-color: rgba(5, 150, 105, 0.2);
+  box-shadow:
+    0 25px 30px -10px rgba(5, 150, 105, 0.12),
+    0 10px 15px -5px rgba(0, 0, 0, 0.03);
+}
+
+/* Icon Container - Refined glow */
+.card-icon-wrapper {
+  color: #475569;
+  transition: all 0.4s ease;
+}
+
+.service-card-modern:hover .card-icon-wrapper {
+  color: #059669;
+  filter: drop-shadow(0 4px 8px rgba(5, 150, 105, 0.2));
+}
+
+/* Redesigned Button - Slim & Elegant Pill */
+.btn-modern-slim {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: white;
+  padding: 0.5rem 1.1rem;
+  /* Balanced */
+  border-radius: 9999px;
+  /* Pill shape */
+  font-weight: 800;
+  font-size: 0.75rem;
+  /* Balanced micro font */
+  letter-spacing: 0.05em;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 10px rgba(5, 150, 105, 0.2);
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn-modern-slim::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.btn-modern-slim:hover::after {
+  transform: translateX(100%);
+}
+
+.btn-modern-slim:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(5, 150, 105, 0.35);
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+/* Steel Blue Ultra-Petite Services Grid - Precision Match */
+.glass-card-square {
+  background: #ced9e5;
+  border: 1px solid #7a8fa1;
+  box-shadow:
+    0 2px 4px -1px rgba(0, 0, 0, 0.05),
+    0 1px 2px -1px rgba(0, 0, 0, 0.03),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .glass-card-square {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.5);
+}
+
+.glass-card-square:hover {
+  background: #cbd5e1;
+  /* Subtle darkening on hover */
+  transform: translateY(-3px);
+  border-color: #475569;
+  box-shadow:
+    0 8px 12px -3px rgba(0, 0, 0, 0.1),
+    0 3px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+
+/* 3D Card Effects */
+.card-3d {
+  background: var(--bg-white);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(5, 150, 105, 0.05);
+  box-shadow:
+    0 15px 35px -5px var(--shadow-color),
+    0 5px 15px -5px var(--shadow-strong);
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.dark .card-3d {
+  background: #0f172a;
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.5);
+}
+
+.card-3d::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card-3d:hover {
+  transform: translateY(-15px) rotateX(5deg) scale(1.02);
+  box-shadow:
+    0 25px 60px var(--shadow-color),
+    0 10px 30px var(--shadow-strong),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.card-3d:hover::before {
+  opacity: 1;
+}
+
+/* 3D Button Styles */
+.btn-3d {
+  background: linear-gradient(135deg, var(--primary-accent), #047857);
+  color: white;
+  padding: 1.2rem 2.5rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  box-shadow:
+    0 8px 20px rgba(5, 150, 105, 0.3),
+    0 3px 8px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-3d::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.6s;
+}
+
+.btn-3d:hover::before {
+  left: 100%;
+}
+
+.btn-3d:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow:
+    0 15px 35px rgba(5, 150, 105, 0.4),
+    0 8px 15px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn-3d:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn-outline-3d {
+  background: transparent;
+  color: var(--primary-accent);
+  padding: 1.2rem 2.5rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  border: 2px solid var(--primary-accent);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  transform-style: preserve-3d;
+  box-shadow:
+    0 5px 15px rgba(5, 150, 105, 0.2),
+    inset 0 0 0 rgba(5, 150, 105, 0);
+}
+
+.btn-outline-3d:hover {
+  background: var(--primary-accent);
+  color: white;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow:
+    0 12px 25px rgba(5, 150, 105, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+
+/* 3D Animations */
+@keyframes float3d {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotateX(0deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotateX(5deg);
+  }
+}
+
+@keyframes pulse3d {
+
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(5, 150, 105, 0.3);
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(5, 150, 105, 0.5);
+  }
+}
+
+@keyframes fadeInUp3d {
+  from {
+    opacity: 0;
+    transform: translateY(40px) rotateX(-15deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+.animate-float-3d {
+  animation: float3d 4s ease-in-out infinite;
+}
+
+.animate-pulse-3d {
+  animation: pulse3d 2s ease-in-out infinite;
+}
+
+.animate-fade-in-up-3d {
+  animation: fadeInUp3d 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes stamp-pulse {
+
+  0%,
+  100% {
+    transform: rotate(-12deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(-12deg) scale(1.1);
+  }
+}
+
+.animate-stamp-pulse {
+  animation: stamp-pulse 2s ease-in-out infinite;
+}
+
+
+/* Custom Scrollbar - Light Theme */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary-accent), #047857);
+  border-radius: 6px;
+  border: 2px solid var(--bg-light);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #1e293b, #0f172a);
+  border: 2px solid #020617;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #047857, var(--primary-accent));
+}
+
+/* Content visibility for off-screen sections */
+#pricing,
+#services,
+#about,
+#reviews,
+#contact {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 3rem;
+  }
+}
