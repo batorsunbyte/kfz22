@@ -2,7 +2,7 @@
 // Rendered in the static HTML — no client JS required.
 // TODO: Verify GEO coordinates against the real address once available.
 
-const SITE_URL = 'https://kfz-technik-22.at'
+const SITE_URL = 'https://kfz22.com'
 
 const data = {
     '@context': 'https://schema.org',

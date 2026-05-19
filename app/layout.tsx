@@ -5,8 +5,7 @@ import Providers from '@/components/Providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
-// TODO: Replace with the real production URL once domain is connected
-const SITE_URL = 'https://kfz-technik-22.at'
+const SITE_URL = 'https://kfz22.com'
 
 export const viewport = {
     width: 'device-width',

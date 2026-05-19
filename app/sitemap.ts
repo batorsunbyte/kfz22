@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-const SITE_URL = 'https://kfz-technik-22.at'
+const SITE_URL = 'https://kfz22.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const lastModified = new Date()

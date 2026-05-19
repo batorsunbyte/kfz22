@@ -1,6 +1,6 @@
 // BreadcrumbList JSON-LD - helps Google show breadcrumb navigation in search results.
 
-const SITE_URL = 'https://kfz-technik-22.at'
+const SITE_URL = 'https://kfz22.com'
 
 type Crumb = { name: string; path: string }
 
