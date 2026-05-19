@@ -17,6 +17,9 @@ Thumbs.db
 # Local Claude Code permissions (per-machine, not per-repo)
 .claude/settings.local.json
 
+# Internal AI tooling docs (not part of the product)
+.agent/
+
 # Local env files
 .env
 .env.local
