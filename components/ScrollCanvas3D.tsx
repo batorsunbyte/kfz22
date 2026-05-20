@@ -20,6 +20,18 @@ export default function ScrollCanvas3D() {
 
     const [imagesLoaded, setImagesLoaded] = useState(false)
     const [loadedImages, setLoadedImages] = useState<HTMLImageElement[]>([])
+    const [isMobile, setIsMobile] = useState(false)
+
+    // Detect mobile viewport — disable scroll-bound parallax there to avoid
+    // stacking-context repaints that cause cards around the canvas to jitter.
+    useEffect(() => {
+        if (typeof window === 'undefined') return
+        const mq = window.matchMedia('(max-width: 768px)')
+        const onChange = () => setIsMobile(mq.matches)
+        onChange()
+        mq.addEventListener('change', onChange)
+        return () => mq.removeEventListener('change', onChange)
+    }, [])
 
     // Preload images
     useEffect(() => {
@@ -82,7 +94,7 @@ export default function ScrollCanvas3D() {
                     }}
                 />
 
-                {/* Subtle animated overlay */}
+                {/* Subtle animated overlay — scroll-bound scale only on desktop (mobile: static) */}
                 <div
                     className="absolute inset-0 opacity-20"
                     style={{
@@ -92,8 +104,10 @@ export default function ScrollCanvas3D() {
                 transparent 60%
               )
             `,
-                        transform: `scale(${1 + scrollProgress * 0.3})`,
-                        transition: 'transform 0.3s ease-out',
+                        ...(isMobile ? {} : {
+                            transform: `scale(${1 + scrollProgress * 0.3})`,
+                            transition: 'transform 0.3s ease-out',
+                        }),
                     }}
                 />
 
@@ -240,13 +254,19 @@ export default function ScrollCanvas3D() {
                                     </div>
                                 </div>
 
-                                {/* Canvas with 3D effects */}
+                                {/* Canvas with 3D effects — scroll-bound rotation/scale only on desktop.
+                                    On mobile this transform triggered repaints of the stacking context,
+                                    causing the floating cards around the canvas to jitter on scroll-up. */}
                                 <div
                                     className="relative"
-                                    style={{
-                                        transform: `perspective(1200px) rotateY(${scrollProgress * 5}deg) scale(${0.95 + scrollProgress * 0.05})`,
-                                        transition: 'transform 0.3s ease-out',
-                                    }}
+                                    style={
+                                        isMobile
+                                            ? undefined
+                                            : {
+                                                transform: `perspective(1200px) rotateY(${scrollProgress * 5}deg) scale(${0.95 + scrollProgress * 0.05})`,
+                                                transition: 'transform 0.3s ease-out',
+                                            }
+                                    }
                                 >
                                     <canvas
                                         ref={canvasRef}
