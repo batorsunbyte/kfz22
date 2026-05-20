@@ -170,15 +170,7 @@ export default function Footer() {
                 {/* SunByte credit */}
                 <div className="mt-6 text-center">
                     <p className="text-slate-300 dark:text-slate-600 text-[10px] font-bold uppercase tracking-[0.3em]">
-                        Made by{' '}
-                        <a
-                            href="https://sunbyte.at"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-emerald-600 dark:text-[#ffd100] hover:underline"
-                        >
-                            SunByte.AT
-                        </a>
+                        Made by <span className="text-emerald-600 dark:text-[#ffd100]">SunByte.AT</span>
                     </p>
                 </div>
             </div>
