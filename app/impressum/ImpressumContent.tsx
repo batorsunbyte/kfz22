@@ -89,7 +89,7 @@ export default function ImpressumContent() {
                             <Row label={p.legalFormLabel} value="Gesellschaft mit beschränkter Haftung (GmbH)" />
                             <Row label={p.businessLocationLabel} value={`Eipeldauer Straße 43\n1220 Wien\nÖsterreich`} />
                             <Row label={p.managementLabel} value="Furkan Alazcioglu & Ahmed Atak" />
-                            <Row label="Gewerberechtliche Geschäftsführung" value="Ahmed Atak" />
+                            <Row label="Gewerberechtliche Geschäftsführung" value="Furkan Alazcioglu & Ahmed Atak" />
                             <Row label={p.businessPurposeLabel} value={`Kraftfahrzeugtechnik (eingeschränkt auf Reparatur von Kraftfahrzeugen)\n§57a Pickerl-Prüfstelle`} />
                         </Section>
 
