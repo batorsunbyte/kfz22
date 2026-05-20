@@ -34,8 +34,9 @@ export default function BrandMarquee() {
             aria-label={t.brands.title}
             className="relative pt-6 pb-12 sm:pt-8 sm:pb-16 bg-transparent overflow-hidden"
         >
-            {/* Bridge background: vertical gradient that matches ScrollCanvas3D-Ende (oben) und IntroSection (unten) — keine Kante */}
-            <div className="absolute inset-0 -z-10 bg-gradient-to-b from-slate-100 via-slate-50 to-white dark:from-slate-950 dark:via-slate-950 dark:to-slate-950 pointer-events-none" />
+            {/* Bridge background: top color matches ScrollCanvas3D radial-gradient end (#e1e8ed from --hero-bg-gradient),
+                bottom matches IntroSection (white). Dark mode: solid #020617 — identisch zu beiden Nachbarn. */}
+            <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#e1e8ed] via-slate-50 to-white dark:from-slate-950 dark:via-slate-950 dark:to-slate-950 pointer-events-none" />
 
             <p className="relative text-center text-[10px] sm:text-[11px] font-black uppercase tracking-[0.3em] text-slate-400 dark:text-slate-500 mb-6 sm:mb-8 px-4">
                 {t.brands.title}
