@@ -195,8 +195,7 @@ export default function ContactSection() {
                             <div className="space-y-4 relative z-10">
                                 {[
                                     { day: t.contact.monFri, hours: '09:00 - 18:00' },
-                                    { day: t.contact.sat, hours: t.contact.closed, accent: true },
-                                    { day: t.contact.sun, hours: t.contact.closed, accent: true }
+                                    { day: `${t.contact.sat} - ${t.contact.sun}`, hours: t.contact.closed, accent: true }
                                 ].map((item, i) => (
                                     <div key={i} className="flex justify-between items-center transition-all hover:translate-x-1">
                                         <span className="text-[11px] font-black text-slate-400 dark:text-slate-400 uppercase tracking-[0.2em]">{item.day}</span>
