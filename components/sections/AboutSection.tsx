@@ -117,7 +117,7 @@ export default function AboutSection() {
                                 <span className="text-[12px] font-black text-[#1e293b]/70 uppercase tracking-widest">{t.about.location}</span>
                                 <h4 className="text-xl font-black text-[#1e293b] uppercase tracking-tighter leading-none">{t.about.consultOnSite}</h4>
                             </div>
-                            <a href="tel:+4312561822" className="bg-[#1e293b] text-white px-6 py-3 rounded-xl font-black text-xs uppercase tracking-widest shadow-lg transition-transform hover:scale-105 active:scale-95 inline-block">
+                            <a href="tel:012561822" className="bg-[#1e293b] text-white px-6 py-3 rounded-xl font-black text-xs uppercase tracking-widest shadow-lg transition-transform hover:scale-105 active:scale-95 inline-block">
                                 {t.about.contactBtn}
                             </a>
                         </div>

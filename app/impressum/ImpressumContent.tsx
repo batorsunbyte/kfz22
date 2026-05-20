@@ -8,8 +8,6 @@ import { useTranslation } from '@/hooks/useTranslation'
 export default function ImpressumContent() {
     const { t } = useTranslation()
     const p = t.pages.imprint
-    const PH = p.placeholder
-    const VERIFY = p.verifyNote
 
     return (
         <main className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-500">
@@ -57,26 +55,29 @@ export default function ImpressumContent() {
                             </p>
                         </div>
 
-                        {/* Contact header block - phone, email, address summary */}
+                        {/* Contact header block - brand name, address, phone, email */}
                         <div className="px-8 md:px-12 py-8 border-b border-slate-200 dark:border-slate-800">
-                            <h2 className="text-2xl md:text-3xl font-black text-[#1e293b] dark:text-white uppercase tracking-tight mb-2">
+                            <h2 className="text-2xl md:text-3xl font-black text-[#1e293b] dark:text-white uppercase tracking-tight mb-1">
                                 KFZ Technik 22
                             </h2>
+                            <p className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-3">
+                                Ein Unternehmen der Alazcioglu &amp; Bilen GmbH
+                            </p>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-semibold">
-                                Eipeldauer Str. 43<br />
+                                Eipeldauer Straße 43<br />
                                 1220 Wien, Österreich
                             </p>
                             <div className="mt-4 flex flex-col sm:flex-row gap-x-6 gap-y-2 text-sm">
                                 <div>
                                     <span className="text-slate-400 dark:text-slate-500 font-bold mr-2">{p.phoneLabel}:</span>
-                                    <a href="tel:+4312561822" className="text-[#1e293b] dark:text-white font-bold hover:text-emerald-600 dark:hover:text-[#ffd100] transition-colors">
-                                        +43 1 2561822
+                                    <a href="tel:012561822" className="text-[#1e293b] dark:text-white font-bold hover:text-emerald-600 dark:hover:text-[#ffd100] transition-colors">
+                                        +43 1 256 18 22
                                     </a>
                                 </div>
                                 <div>
                                     <span className="text-slate-400 dark:text-slate-500 font-bold mr-2">{p.emailLabel}:</span>
-                                    <a href="mailto:info@kfztechnik22.at" className="text-[#1e293b] dark:text-white font-bold hover:text-emerald-600 dark:hover:text-[#ffd100] transition-colors">
-                                        info@kfztechnik22.at
+                                    <a href="mailto:office@kfz22.at" className="text-[#1e293b] dark:text-white font-bold hover:text-emerald-600 dark:hover:text-[#ffd100] transition-colors">
+                                        office@kfz22.at
                                     </a>
                                 </div>
                             </div>
@@ -84,23 +85,24 @@ export default function ImpressumContent() {
 
                         {/* Company details */}
                         <Section heading={p.companyHeading}>
-                            <Row label={p.companyNameLabel} value={`KFZ Technik 22 ${VERIFY}`} />
-                            <Row label={p.legalFormLabel} value={VERIFY} />
-                            <Row label={p.businessLocationLabel} value={`Eipeldauer Str. 43\n1220 Wien\nÖsterreich`} />
-                            <Row label={p.managementLabel} value={PH} />
-                            <Row label={p.businessPurposeLabel} value={`Kraftfahrzeugtechnik\n§57a Pickerl-Prüfstelle`} />
+                            <Row label={p.companyNameLabel} value="Alazcioglu & Bilen GmbH" />
+                            <Row label={p.legalFormLabel} value="Gesellschaft mit beschränkter Haftung (GmbH)" />
+                            <Row label={p.businessLocationLabel} value={`Eipeldauer Straße 43\n1220 Wien\nÖsterreich`} />
+                            <Row label={p.managementLabel} value="Ahmed Atak (gewerberechtliche Geschäftsführung)" />
+                            <Row label={p.businessPurposeLabel} value={`Kraftfahrzeugtechnik (eingeschränkt auf Reparatur von Kraftfahrzeugen)\n§57a Pickerl-Prüfstelle`} />
                         </Section>
 
                         {/* Legal / Registry */}
                         <Section heading={p.legalHeading}>
-                            <Row label={p.vatLabel} value={`ATU 12345678 ${VERIFY}`} />
-                            <Row label={p.registryLabel} value={PH} />
-                            <Row label={p.registryCourtLabel} value={`Handelsgericht Wien ${VERIFY}`} />
+                            <Row label={p.vatLabel} value="ATU72323407" />
+                            <Row label={p.registryLabel} value="FN 465141g" />
+                            <Row label={p.registryCourtLabel} value="Handelsgericht Wien" />
+                            <Row label="GISA-Zahl" value="30162877" />
                         </Section>
 
                         {/* Trade & supervision */}
                         <Section heading={p.scopeHeading}>
-                            <Row label={p.chamberLabel} value="Wirtschaftskammer Wien (WK Wien)" />
+                            <Row label={p.chamberLabel} value="WKO Wien, Landesinnung der Fahrzeugtechnik" />
                             <Row label={p.authorityLabel} value="Magistratisches Bezirksamt für den 22. Bezirk Wien" />
                             <Row label={p.tradeRegulationLabel} value={p.tradeRegulationValue} link="https://www.ris.bka.gv.at" />
                         </Section>

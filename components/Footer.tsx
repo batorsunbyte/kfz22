@@ -130,7 +130,7 @@ export default function Footer() {
                         <div className="space-y-6">
                             <div className="glass-card-3d bg-white dark:bg-white/5 border-slate-200 dark:border-white/5 p-4 rounded-2xl hover:bg-slate-50 dark:hover:bg-white/10 transition-colors cursor-pointer group">
                                 <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-2">{t.footer.phone247}</p>
-                                <a href="tel:+4312561822" className="text-emerald-600 dark:text-[#ffd100] font-black text-lg group-hover:scale-105 transition-transform block hover:underline">+43 1 2561822</a>
+                                <a href="tel:012561822" className="text-emerald-600 dark:text-[#ffd100] font-black text-lg group-hover:scale-105 transition-transform block hover:underline">+43 1 256 18 22</a>
                             </div>
                             <div className="flex gap-4">
                                 {/* Social Icons - Generic Business Style */}

@@ -4,7 +4,7 @@ import BreadcrumbListJsonLd from '@/components/JsonLd/BreadcrumbList'
 
 export const metadata: Metadata = {
     title: 'Impressum',
-    description: 'Impressum von KFZ Technik 22, Eipeldauer Str. 43, 1220 Wien. Angaben gemäß § 5 ECG, § 14 UGB und § 25 MedienG.',
+    description: 'Impressum von KFZ Technik 22, Eipeldauer Straße 43, 1220 Wien. Angaben gemäß § 5 ECG, § 14 UGB und § 25 MedienG.',
     robots: {
         index: true,
         follow: true,

@@ -15,7 +15,7 @@ export default function HeroHeader() {
                 {/* Local trust badge */}
                 <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 px-4 py-1.5 rounded-full text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] mb-6 border border-emerald-200/50 dark:border-emerald-800/50">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    Eipeldauer Str. 43 · Donaustadt
+                    Eipeldauer Straße 43 · Donaustadt
                 </div>
 
                 {/* H1 - the SEO-critical heading */}

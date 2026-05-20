@@ -297,7 +297,7 @@ export default function ScrollCanvas3D() {
                     <div className="flex-1 w-full lg:w-auto grid grid-cols-2 gap-3 lg:flex lg:flex-col lg:gap-6 order-last lg:order-none">
                         {/* Call Now - PRIMARY action, dark with prominent number */}
                         <a
-                            href="tel:+4312561822"
+                            href="tel:012561822"
                             className="group/call card-3d !bg-[#1e293b] dark:!bg-emerald-950 !border-none !p-4 lg:!p-7 h-full flex flex-col justify-center relative overflow-hidden hover:scale-[1.02] transition-transform duration-300"
                         >
                             {/* Decorative pulse glow */}
@@ -321,7 +321,7 @@ export default function ScrollCanvas3D() {
                                         +43
                                     </span>
                                     <span className="text-white font-black text-base sm:text-xl lg:text-3xl tracking-tight whitespace-nowrap tabular-nums">
-                                        01 2561 822
+                                        01 256 18 22
                                     </span>
                                 </div>
                             </div>

@@ -115,7 +115,7 @@ export default function PricingSection() {
                             {/* Bottom Row: CTA only */}
                             <div className="mt-auto pt-4 border-t border-emerald-50/40 dark:border-slate-800/40 flex justify-center">
                                 <a
-                                    href="tel:+4312561822"
+                                    href="tel:012561822"
                                     className="btn-modern-slim dark:bg-[#ffd100] dark:text-slate-950 dark:hover:bg-white flex items-center gap-2 min-h-[44px]"
                                 >
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

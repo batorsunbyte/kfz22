@@ -26,7 +26,7 @@ const de = {
         viewPrices: 'Zu den Preisen',
         callNow: 'Jetzt anrufen',
         callNowShort: 'Anrufen',
-        phoneNumber: '+43 1 2561822',
+        phoneNumber: '+43 1 256 18 22',
         planRoute: 'Route planen',
         planRouteShort: 'Route',
         planRouteDesc: 'Wien 22. Bezirk',
@@ -34,7 +34,7 @@ const de = {
         pruefstelle: 'PRÜFSTELLE',
         h1: 'KFZ-Werkstatt & §57a Pickerl-Prüfstelle',
         h1Highlight: '1220 Wien',
-        h1Sub: 'Ihr Meisterbetrieb in der Donaustadt — Service, Reparatur, Diagnose und Pickerl. Eipeldauer Str. 43.',
+        h1Sub: 'Ihr Meisterbetrieb in der Donaustadt — Service, Reparatur, Diagnose und Pickerl. Eipeldauer Straße 43.',
     },
 
     intro: {
@@ -57,7 +57,7 @@ const de = {
         items: [
             {
                 question: 'Wie buche ich einen Termin bei KFZ Technik 22?',
-                answer: 'Am einfachsten direkt online über unseren Microsoft Bookings Kalender — den Link finden Sie auf der Kontakt-Seite. Alternativ erreichen Sie uns telefonisch unter +43 1 2561822 während der Öffnungszeiten (Mo-Fr 08:00-18:00, Sa 09:00-14:00).',
+                answer: 'Am einfachsten direkt online über unseren Microsoft Bookings Kalender — den Link finden Sie auf der Kontakt-Seite. Alternativ erreichen Sie uns telefonisch unter +43 1 256 18 22 während der Öffnungszeiten (Mo-Fr 09:00-18:00, Sa+So geschlossen).',
             },
             {
                 question: 'Welche Marken werden in Ihrer Werkstatt gewartet?',
@@ -77,7 +77,7 @@ const de = {
             },
             {
                 question: 'Wo befindet sich die Werkstatt genau?',
-                answer: 'KFZ Technik 22 finden Sie in der Eipeldauer Str. 43, 1220 Wien (Donaustadt). Mit dem Auto erreichen Sie uns über die Wagramer Straße / Erzherzog-Karl-Straße. Parkplätze stehen direkt vor Ort zur Verfügung.',
+                answer: 'KFZ Technik 22 finden Sie in der Eipeldauer Straße 43, 1220 Wien (Donaustadt). Mit dem Auto erreichen Sie uns über die Wagramer Straße / Erzherzog-Karl-Straße. Parkplätze stehen direkt vor Ort zur Verfügung.',
             },
         ],
     },
@@ -213,7 +213,7 @@ const de = {
         title: 'KONTAKT',
         locationContact: 'Standort & Kontakt',
         addressLabel: 'Anschrift',
-        addressLine1: 'Eipeldauer Str. 43',
+        addressLine1: 'Eipeldauer Straße 43',
         addressLine2: '1220 Wien, Österreich',
         phone: 'Telefon',
         email: 'E-Mail',
@@ -368,7 +368,7 @@ const de = {
             intro: 'Der Schutz Ihrer personenbezogenen Daten ist uns ein wichtiges Anliegen. Wir verarbeiten Ihre Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, DSG). In dieser Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Website.',
 
             controllerHeading: 'Verantwortlicher',
-            controllerText: 'Verantwortlicher für die Datenverarbeitung im Sinne der DSGVO ist:\n\nKFZ Technik 22\nEipeldauer Str. 43\n1220 Wien, Österreich\nTelefon: +43 1 2561822\nE-Mail: info@kfztechnik22.at',
+            controllerText: 'Verantwortlicher für die Datenverarbeitung im Sinne der DSGVO ist:\n\nAlazcioglu & Bilen GmbH (KFZ Technik 22)\nEipeldauer Straße 43\n1220 Wien, Österreich\nTelefon: +43 1 256 18 22\nE-Mail: office@kfz22.at',
 
             dataCollectionHeading: 'Datenerfassung beim Besuch der Website',
             dataCollectionIntro: 'Beim reinen Besuch unserer Website werden zunächst nur Daten erfasst, die Ihr Browser automatisch übermittelt.',

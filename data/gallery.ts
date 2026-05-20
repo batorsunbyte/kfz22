@@ -65,7 +65,7 @@ export const galleryItems: readonly GalleryItem[] = [
     },
     {
         src: '/gallery/werkstatt-3.jpg',
-        alt: 'Kundenparkplätze und Eingang KFZ Technik 22, Eipeldauer Str. 43',
+        alt: 'Kundenparkplätze und Eingang KFZ Technik 22, Eipeldauer Straße 43',
         caption: 'Eingangsbereich & Parkplätze',
         category: 'werkstatt',
         placeholder: true,

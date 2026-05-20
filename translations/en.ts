@@ -28,7 +28,7 @@ const en: Translations = {
         viewPrices: 'View prices',
         callNow: 'Call now',
         callNowShort: 'Call',
-        phoneNumber: '+43 1 2561822',
+        phoneNumber: '+43 1 256 18 22',
         planRoute: 'Plan route',
         planRouteShort: 'Route',
         planRouteDesc: 'Vienna 22nd District',
@@ -36,7 +36,7 @@ const en: Translations = {
         pruefstelle: 'INSPECTION',
         h1: 'Auto Repair & §57a Vehicle Inspection',
         h1Highlight: 'Vienna 1220',
-        h1Sub: 'Your master workshop in Donaustadt — service, repair, diagnostics and §57a inspection. Eipeldauer Str. 43.',
+        h1Sub: 'Your master workshop in Donaustadt — service, repair, diagnostics and §57a inspection. Eipeldauer Straße 43.',
     },
 
     intro: {
@@ -59,7 +59,7 @@ const en: Translations = {
         items: [
             {
                 question: 'How do I book an appointment at KFZ Technik 22?',
-                answer: 'The easiest way is online via our Microsoft Bookings calendar — you\'ll find the link on the contact page. Alternatively reach us by phone at +43 1 2561822 during opening hours (Mon-Fri 08:00-18:00, Sat 09:00-14:00).',
+                answer: 'The easiest way is online via our Microsoft Bookings calendar — you\'ll find the link on the contact page. Alternatively reach us by phone at +43 1 256 18 22 during opening hours (Mon-Fri 09:00-18:00, Sat+Sun closed).',
             },
             {
                 question: 'Which makes do you service?',
@@ -79,7 +79,7 @@ const en: Translations = {
             },
             {
                 question: 'Where exactly is the workshop located?',
-                answer: 'You will find KFZ Technik 22 at Eipeldauer Str. 43, 1220 Vienna (Donaustadt). By car you reach us via Wagramer Strasse / Erzherzog-Karl-Strasse. Parking is available directly on site.',
+                answer: 'You will find KFZ Technik 22 at Eipeldauer Straße 43, 1220 Vienna (Donaustadt). By car you reach us via Wagramer Strasse / Erzherzog-Karl-Strasse. Parking is available directly on site.',
             },
         ],
     },
@@ -215,7 +215,7 @@ const en: Translations = {
         title: 'CONTACT',
         locationContact: 'Location & Contact',
         addressLabel: 'Address',
-        addressLine1: 'Eipeldauer Str. 43',
+        addressLine1: 'Eipeldauer Straße 43',
         addressLine2: '1220 Vienna, Austria',
         phone: 'Phone',
         email: 'Email',
@@ -370,7 +370,7 @@ const en: Translations = {
             intro: 'The protection of your personal data is important to us. We process your data exclusively on the basis of legal provisions (GDPR, DSG). In this privacy policy we inform you about the most important aspects of data processing within the scope of our website.',
 
             controllerHeading: 'Controller',
-            controllerText: 'The controller responsible for data processing under the GDPR is:\n\nKFZ Technik 22\nEipeldauer Str. 43\n1220 Vienna, Austria\nPhone: +43 1 2561822\nEmail: info@kfztechnik22.at',
+            controllerText: 'The controller responsible for data processing under the GDPR is:\n\nAlazcioglu & Bilen GmbH (KFZ Technik 22)\nEipeldauer Straße 43\n1220 Vienna, Austria\nPhone: +43 1 256 18 22\nEmail: office@kfz22.at',
 
             dataCollectionHeading: 'Data Collection on Website Visit',
             dataCollectionIntro: 'When you simply visit our website, only data that your browser automatically transmits is initially collected.',

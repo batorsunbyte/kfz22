@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         default: 'KFZ Technik 22 – Meisterbetrieb & §57a Pickerl-Prüfstelle | 1220 Wien',
         template: '%s | KFZ Technik 22 – 1220 Wien',
     },
-    description: 'KFZ-Werkstatt und §57a Pickerl-Prüfstelle im 22. Bezirk Wien. Service, Reparatur, Diagnose, Pickerl, Bremsen, Reifen — fair, schnell, persönlich. Eipeldauer Str. 43, 1220 Wien.',
+    description: 'KFZ-Werkstatt und §57a Pickerl-Prüfstelle im 22. Bezirk Wien. Service, Reparatur, Diagnose, Pickerl, Bremsen, Reifen — fair, schnell, persönlich. Eipeldauer Straße 43, 1220 Wien.',
     keywords: [
         'KFZ Technik 22',
         'KFZ Werkstatt 1220 Wien',

@@ -13,13 +13,15 @@ const data = {
     description:
         'KFZ-Werkstatt und §57a Pickerl-Prüfstelle im 22. Bezirk Wien. Service, Reparatur, Diagnose, Bremsen, Reifen, Klima, Zahnriemen.',
     url: SITE_URL,
-    telephone: '+43 1 2561822',
-    email: 'info@kfztechnik22.at',
+    telephone: '+43 1 256 18 22',
+    email: 'office@kfz22.at',
     priceRange: '€€',
     image: `${SITE_URL}/imgs/ezgif-frame-100.jpg`,
+    legalName: 'Alazcioglu & Bilen GmbH',
+    vatID: 'ATU72323407',
     address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Eipeldauer Str. 43',
+        streetAddress: 'Eipeldauer Straße 43',
         addressLocality: 'Wien',
         postalCode: '1220',
         addressRegion: 'Wien',
@@ -27,7 +29,7 @@ const data = {
     },
     geo: {
         '@type': 'GeoCoordinates',
-        // Approximate coordinates for Eipeldauer Str. — replace with exact ones once verified
+        // Verified coordinates for Eipeldauer Straße 43, 1220 Wien
         latitude: 48.256088353684405,
         longitude:  16.441238526181778,
     },
@@ -42,14 +44,8 @@ const data = {
         {
             '@type': 'OpeningHoursSpecification',
             dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-            opens: '08:00',
-            closes: '18:00',
-        },
-        {
-            '@type': 'OpeningHoursSpecification',
-            dayOfWeek: 'Saturday',
             opens: '09:00',
-            closes: '14:00',
+            closes: '18:00',
         },
     ],
     knowsAbout: [
@@ -81,7 +77,7 @@ const data = {
     },
     contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+43 1 2561822',
+        telephone: '+43 1 256 18 22',
         contactType: 'customer service',
         availableLanguage: ['de', 'en'],
         areaServed: 'AT',

@@ -88,16 +88,28 @@ export default function ContactSection() {
                                         <div className="flex-1 h-px bg-slate-200 dark:bg-slate-700" />
                                     </div>
 
-                                    {/* Secondary actions: Call + Route */}
+                                    {/* Secondary actions: Call + WhatsApp + Route */}
                                     <div className="flex flex-col sm:flex-row gap-3">
                                         <a
-                                            href="tel:+4312561822"
+                                            href="tel:012561822"
                                             className="flex-1 flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-600 text-white py-4 rounded-2xl font-black text-sm uppercase tracking-widest transition-all duration-300 hover:shadow-lg active:scale-[0.98]"
                                         >
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                             </svg>
-                                            +43 1 2561822
+                                            +43 1 256 18 22
+                                        </a>
+                                        <a
+                                            href="https://wa.me/436608646433"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="WhatsApp"
+                                            className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white py-4 rounded-2xl font-black text-sm uppercase tracking-widest transition-all duration-300 hover:shadow-lg active:scale-[0.98]"
+                                        >
+                                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M20.52 3.48A11.86 11.86 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22a9.94 9.94 0 01-5.07-1.39l-.36-.21-3.67.96.98-3.57-.23-.37A9.94 9.94 0 012 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.46-7.49c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.07 4.47.71.31 1.26.49 1.69.63.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" />
+                                            </svg>
+                                            WhatsApp
                                         </a>
                                         <a
                                             href={MAPS_URL}
@@ -143,11 +155,11 @@ export default function ContactSection() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="group/item">
                                         <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{t.contact.phone}</p>
-                                        <a href="tel:+4312561822" className="text-slate-700 dark:text-slate-300 font-bold text-lg leading-tight transition-colors group-hover/item:text-emerald-600 dark:group-hover/item:text-[#ffd100] hover:underline">+43 1 2561822</a>
+                                        <a href="tel:012561822" className="text-slate-700 dark:text-slate-300 font-bold text-lg leading-tight transition-colors group-hover/item:text-emerald-600 dark:group-hover/item:text-[#ffd100] hover:underline">+43 1 256 18 22</a>
                                     </div>
                                     <div className="group/item">
                                         <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{t.contact.email}</p>
-                                        <p className="text-slate-700 dark:text-slate-300 font-bold text-sm leading-tight break-all transition-colors group-hover/item:text-emerald-600 dark:group-hover/item:text-[#ffd100]">info@kfztechnik22.at</p>
+                                        <a href="mailto:office@kfz22.at" className="text-slate-700 dark:text-slate-300 font-bold text-sm leading-tight break-all transition-colors group-hover/item:text-emerald-600 dark:group-hover/item:text-[#ffd100] hover:underline">office@kfz22.at</a>
                                     </div>
                                 </div>
                             </div>
@@ -182,8 +194,8 @@ export default function ContactSection() {
 
                             <div className="space-y-4 relative z-10">
                                 {[
-                                    { day: t.contact.monFri, hours: '08:00 - 18:00' },
-                                    { day: t.contact.sat, hours: '09:00 - 14:00' },
+                                    { day: t.contact.monFri, hours: '09:00 - 18:00' },
+                                    { day: t.contact.sat, hours: t.contact.closed, accent: true },
                                     { day: t.contact.sun, hours: t.contact.closed, accent: true }
                                 ].map((item, i) => (
                                     <div key={i} className="flex justify-between items-center transition-all hover:translate-x-1">
