@@ -56,9 +56,10 @@ export default function ScrollCanvas3D() {
         const img = loadedImages[currentFrame - 1]
         if (!img) return
 
-        // Set canvas size to match image
-        canvas.width = img.width
-        canvas.height = img.height
+        // Only resize canvas if dimensions actually changed — setting canvas.width
+        // (even to the same value) resets the bitmap and causes flicker on every paint.
+        if (canvas.width !== img.width) canvas.width = img.width
+        if (canvas.height !== img.height) canvas.height = img.height
 
         // Clear and draw
         ctx.clearRect(0, 0, canvas.width, canvas.height)

@@ -350,14 +350,15 @@ body {
   animation: stamp-pulse 2s ease-in-out infinite;
 }
 
-/* Brand Marquee - seamless horizontal infinite loop */
+/* Brand Marquee - seamless horizontal infinite loop.
+   Track is tripled (3× brand list), so -33.3333% lands on the next identical item. */
 @keyframes marquee {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to { transform: translateX(-33.3333%); }
 }
 
 .animate-marquee {
-  animation: marquee 40s linear infinite;
+  animation: marquee 30s linear infinite;
   will-change: transform;
 }
 

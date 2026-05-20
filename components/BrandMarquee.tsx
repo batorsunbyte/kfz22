@@ -26,8 +26,10 @@ const BRANDS: readonly Brand[] = [
 export default function BrandMarquee() {
     const { t } = useTranslation()
 
-    // Duplicate the list once so translateX(-50%) lands seamlessly back at the start.
-    const loop = [...BRANDS, ...BRANDS]
+    // Triplicate so we always have enough off-screen content on any viewport width —
+    // prevents the visible "empty strip" on mobile while CSS animation runs.
+    // CSS keyframes shift by -33.333% to land seamlessly back at the start.
+    const loop = [...BRANDS, ...BRANDS, ...BRANDS]
 
     return (
         <section
@@ -59,7 +61,8 @@ export default function BrandMarquee() {
                                     src={brand.logo}
                                     alt={brand.name}
                                     className="h-8 sm:h-10 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 select-none"
-                                    loading="lazy"
+                                    loading="eager"
+                                    decoding="async"
                                     draggable={false}
                                 />
                             ) : (
