@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic'
 import Navigation from '@/components/Navigation'
 import HeroHeader from '@/components/HeroHeader'
 import ScrollCanvas3D from '@/components/ScrollCanvas3D'
+import BrandMarquee from '@/components/BrandMarquee'
 import ErrorBoundary from '@/components/ErrorBoundary'
 import LocalBusinessJsonLd from '@/components/JsonLd/LocalBusiness'
 
@@ -48,6 +49,9 @@ export default function Home() {
             <ErrorBoundary>
                 <ScrollCanvas3D />
             </ErrorBoundary>
+
+            {/* Auto-Marken Marquee — direkt unter Hero */}
+            <BrandMarquee />
 
             <ErrorBoundary>
                 <IntroSection />

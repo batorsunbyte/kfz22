@@ -84,6 +84,10 @@ const en: Translations = {
         ],
     },
 
+    brands: {
+        title: 'We service all brands',
+    },
+
     pricing: {
         topOffers: 'TOP OFFERS',
         servicePackages: 'SERVICE PACKAGES',

@@ -60,6 +60,10 @@ export interface Translations {
         }[]
     }
 
+    brands: {
+        title: string
+    }
+
     pricing: {
         topOffers: string
         servicePackages: string

@@ -82,6 +82,10 @@ const de = {
         ],
     },
 
+    brands: {
+        title: 'Wir warten alle Marken',
+    },
+
     pricing: {
         topOffers: 'TOP ANGEBOTE',
         servicePackages: 'SERVICE-PAKETE',
