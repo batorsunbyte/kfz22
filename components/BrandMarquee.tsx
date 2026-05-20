@@ -32,19 +32,19 @@ export default function BrandMarquee() {
     return (
         <section
             aria-label={t.brands.title}
-            className="relative pt-6 pb-12 sm:pt-8 sm:pb-16 bg-slate-100 dark:bg-slate-950 overflow-hidden"
+            className="relative pt-6 pb-12 sm:pt-8 sm:pb-16 bg-transparent overflow-hidden"
         >
-            {/* Soft top fade — schluckt die Kante zur vorherigen Section (Hero/ScrollCanvas3D endet hellgrau) */}
-            <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-white/60 dark:from-slate-900/40 to-transparent pointer-events-none" />
+            {/* Bridge background: vertical gradient that matches ScrollCanvas3D-Ende (oben) und IntroSection (unten) — keine Kante */}
+            <div className="absolute inset-0 -z-10 bg-gradient-to-b from-slate-100 via-slate-50 to-white dark:from-slate-950 dark:via-slate-950 dark:to-slate-950 pointer-events-none" />
 
             <p className="relative text-center text-[10px] sm:text-[11px] font-black uppercase tracking-[0.3em] text-slate-400 dark:text-slate-500 mb-6 sm:mb-8 px-4">
                 {t.brands.title}
             </p>
 
             <div className="relative w-full overflow-hidden group">
-                {/* Edge fades — match section bg so logos don't pop in/out at the borders */}
-                <div className="absolute inset-y-0 left-0 w-16 sm:w-24 z-10 bg-gradient-to-r from-slate-100 dark:from-slate-950 to-transparent pointer-events-none" />
-                <div className="absolute inset-y-0 right-0 w-16 sm:w-24 z-10 bg-gradient-to-l from-slate-100 dark:from-slate-950 to-transparent pointer-events-none" />
+                {/* Edge fades — Mitte-Farbe vom Hauptgradient, kaum sichtbar am Rand */}
+                <div className="absolute inset-y-0 left-0 w-16 sm:w-24 z-10 bg-gradient-to-r from-slate-50 dark:from-slate-950 to-transparent pointer-events-none" />
+                <div className="absolute inset-y-0 right-0 w-16 sm:w-24 z-10 bg-gradient-to-l from-slate-50 dark:from-slate-950 to-transparent pointer-events-none" />
 
                 {/* Marquee track: width = sum of both halves; -50% translation hides the seam */}
                 <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] items-center">
