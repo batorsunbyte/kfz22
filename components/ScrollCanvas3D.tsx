@@ -225,7 +225,7 @@ export default function ScrollCanvas3D() {
                                 </a>
 
                                 {/* Automatikgetriebe-Reparatur Sticker — neuer Service, unten rechts (Spiegel zum Pickerl unten links) */}
-                                <div className="absolute -bottom-6 -right-2 sm:-bottom-8 sm:-right-4 lg:-bottom-10 lg:-right-6 z-50">
+                                <div className="absolute -bottom-10 -right-2 sm:-bottom-12 sm:-right-6 lg:-bottom-14 lg:-right-10 z-50">
                                     <div className="relative group/auto cursor-default">
                                         {/* Pulsing gold glow halo */}
                                         <div className="absolute inset-0 bg-[#ffd100] rounded-2xl blur-2xl opacity-50 group-hover/auto:opacity-80 animate-pulse-3d" />
