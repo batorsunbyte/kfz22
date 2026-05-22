@@ -5,9 +5,6 @@ import { useTranslation } from '@/hooks/useTranslation'
 
 const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=KFZ+Technik+22+Wien+22+Bezirk'
 
-// TODO: Replace with the real Microsoft Bookings URL once available
-const BOOKING_URL = '#'
-
 export default function ContactSection() {
     const { t } = useTranslation()
 
@@ -31,7 +28,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                    {/* Left Column: Online Booking CTA */}
+                    {/* Left Column: Direct Contact Buttons */}
                     <div className="lg:col-span-7">
                         <div className="relative group">
                             {/* Visual Glow behind card */}
@@ -43,52 +40,13 @@ export default function ContactSection() {
                                 <div className="absolute -bottom-32 -left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
                                 <div className="relative z-10">
-                                    {/* Kicker */}
-                                    <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 px-3 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest mb-5">
-                                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                                        {t.contact.bookOnlineKicker}
-                                    </div>
-
                                     {/* Heading */}
-                                    <h3 className="text-3xl md:text-5xl font-black text-[#1e293b] dark:text-white mb-3 uppercase tracking-tighter leading-[0.95]">
-                                        {t.contact.bookOnlineHeading}
+                                    <h3 className="text-2xl md:text-3xl font-black text-[#1e293b] dark:text-white mb-2 uppercase tracking-tighter leading-tight">
+                                        {t.contact.orCallDirectly}
                                     </h3>
-                                    <div className="w-16 h-1.5 bg-[#ffd100] mb-6 rounded-full" />
+                                    <div className="w-16 h-1.5 bg-[#ffd100] mb-8 rounded-full" />
 
-                                    {/* Description */}
-                                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium text-base md:text-lg mb-8 max-w-md">
-                                        {t.contact.bookOnlineDesc}
-                                    </p>
-
-                                    {/* Primary CTA - Online Booking */}
-                                    <a
-                                        href={BOOKING_URL}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="group/btn inline-flex items-center gap-3 bg-[#1e293b] dark:bg-[#ffd100] text-white dark:text-slate-950 px-7 md:px-10 py-5 rounded-2xl font-black text-sm md:text-base uppercase tracking-widest shadow-[0_20px_40px_-10px_rgba(30,41,59,0.4)] dark:shadow-[0_20px_40px_-10px_rgba(255,209,0,0.3)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300"
-                                    >
-                                        <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                        </svg>
-                                        <span>{t.contact.bookOnlineCTA}</span>
-                                        <svg className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                        </svg>
-                                    </a>
-                                    <p className="text-[11px] font-bold text-slate-400 dark:text-slate-500 italic mt-4 max-w-md">
-                                        {t.contact.bookOnlineNote}
-                                    </p>
-
-                                    {/* Divider */}
-                                    <div className="my-8 flex items-center gap-4">
-                                        <div className="flex-1 h-px bg-slate-200 dark:bg-slate-700" />
-                                        <span className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">
-                                            {t.contact.orCallDirectly}
-                                        </span>
-                                        <div className="flex-1 h-px bg-slate-200 dark:bg-slate-700" />
-                                    </div>
-
-                                    {/* Secondary actions: Call + WhatsApp + Route */}
+                                    {/* Direct contact actions: Call + WhatsApp + Route */}
                                     <div className="flex flex-col sm:flex-row gap-3">
                                         <a
                                             href="tel:012561822"

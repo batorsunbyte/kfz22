@@ -16,7 +16,7 @@ const en: Translations = {
 
     hero: {
         premiumService: 'Premium Service',
-        motorTransmission: 'Engine & Transmission',
+        motorTransmission: 'Engine, Transmission & Automatic Gearbox',
         brakeSuspension: 'Brakes & Suspension',
         electronicDiag: 'Electronic Diagnostics',
         expressService: 'Express Service',

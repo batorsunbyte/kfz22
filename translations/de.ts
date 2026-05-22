@@ -14,7 +14,7 @@ const de = {
 
     hero: {
         premiumService: 'Premium Service',
-        motorTransmission: 'Motor & Getriebe',
+        motorTransmission: 'Motor, Getriebe & Automatikgetriebe',
         brakeSuspension: 'Bremsen & Fahrwerk',
         electronicDiag: 'Elektronik Diagnose',
         expressService: 'Express Service',
