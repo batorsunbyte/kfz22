@@ -224,6 +224,49 @@ export default function ScrollCanvas3D() {
                                     </div>
                                 </a>
 
+                                {/* Automatikgetriebe-Reparatur Sticker — neuer Service, unten rechts (Spiegel zum Pickerl unten links) */}
+                                <div className="absolute -bottom-6 -right-2 sm:-bottom-8 sm:-right-4 lg:-bottom-10 lg:-right-6 z-50">
+                                    <div className="relative group/auto cursor-default">
+                                        {/* Pulsing gold glow halo */}
+                                        <div className="absolute inset-0 bg-[#ffd100] rounded-2xl blur-2xl opacity-50 group-hover/auto:opacity-80 animate-pulse-3d" />
+
+                                        {/* "NEU"-Bubble, schwebt oben rechts */}
+                                        <div className="absolute -top-3 -right-2 z-10 bg-red-500 text-white text-[8px] lg:text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-full shadow-lg ring-2 ring-white transform -rotate-12 animate-pulse whitespace-nowrap">
+                                            NEU
+                                        </div>
+
+                                        {/* Sticker - gold burst style with rotation */}
+                                        <div className="relative bg-gradient-to-br from-[#ffd100] via-yellow-400 to-amber-500 rounded-2xl px-4 py-3 lg:px-5 lg:py-3.5 shadow-[0_15px_35px_-5px_rgba(255,180,0,0.55)] transform rotate-6 group-hover/auto:rotate-0 group-hover/auto:scale-105 transition-all duration-500 border-2 border-white/70 overflow-hidden">
+                                            {/* Diagonal shine */}
+                                            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/40 to-transparent -translate-x-full group-hover/auto:translate-x-full transition-transform duration-1000" />
+
+                                            {/* Tape strip - top left for variation */}
+                                            <div
+                                                className="absolute -top-2 left-3 w-8 h-3 lg:w-10 lg:h-3.5 -rotate-12 shadow-md rounded-sm opacity-80"
+                                                style={{
+                                                    background: 'repeating-linear-gradient(45deg, rgba(255,236,170,0.9), rgba(255,236,170,0.9) 4px, rgba(255,220,150,0.9) 4px, rgba(255,220,150,0.9) 8px)',
+                                                }}
+                                            />
+
+                                            <div className="relative flex items-center gap-2 lg:gap-2.5">
+                                                {/* Gear icon */}
+                                                <svg className="w-7 h-7 lg:w-9 lg:h-9 text-[#1e293b] drop-shadow flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
+                                                </svg>
+
+                                                <div className="flex flex-col leading-none">
+                                                    <span className="text-[#1e293b]/70 font-black text-[8px] lg:text-[9px] uppercase tracking-[0.25em] mb-0.5">
+                                                        Reparatur
+                                                    </span>
+                                                    <span className="text-[#1e293b] font-black text-sm lg:text-base tracking-tight uppercase whitespace-nowrap">
+                                                        Automatikgetriebe
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 {/* Prüfstelle Certification Stamp - §57a Pickerl (compact) */}
                                 <div className="absolute -bottom-4 -left-2 sm:-bottom-5 sm:-left-4 lg:-bottom-6 lg:-left-6 z-50">
                                     <div className="relative group cursor-default">

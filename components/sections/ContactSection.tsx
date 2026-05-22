@@ -27,24 +27,37 @@ export default function ContactSection() {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
                     {/* Left Column: Direct Contact Buttons */}
                     <div className="lg:col-span-7">
-                        <div className="relative group">
+                        <div className="relative group h-full">
                             {/* Visual Glow behind card */}
                             <div className="absolute -inset-4 bg-[#ffd100]/5 rounded-[3rem] blur-2xl -z-10 group-hover:bg-[#ffd100]/10 transition-colors" />
 
-                            <div className="relative overflow-hidden bg-white dark:bg-slate-900/50 border border-slate-200/80 dark:border-slate-800/80 rounded-[2.5rem] p-8 md:p-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)]">
+                            <div className="relative overflow-hidden bg-white dark:bg-slate-900/50 border border-slate-200/80 dark:border-slate-800/80 rounded-[2.5rem] p-8 md:p-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] h-full flex flex-col">
                                 {/* Decorative gradient circles */}
                                 <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#ffd100]/20 rounded-full blur-3xl pointer-events-none" />
                                 <div className="absolute -bottom-32 -left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
-                                <div className="relative z-10">
+                                <div className="relative z-10 h-full flex flex-col">
                                     {/* Heading */}
                                     <h3 className="text-2xl md:text-3xl font-black text-[#1e293b] dark:text-white mb-2 uppercase tracking-tighter leading-tight">
                                         {t.contact.orCallDirectly}
                                     </h3>
                                     <div className="w-16 h-1.5 bg-[#ffd100] mb-8 rounded-full" />
+
+                                    {/* Big Phone Hero — fills vertical space, prominent CTA */}
+                                    <a
+                                        href="tel:012561822"
+                                        className="flex-1 flex flex-col items-center justify-center py-8 text-center group/phone"
+                                    >
+                                        <span className="text-[10px] md:text-[11px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.3em] mb-4">
+                                            {t.hero.callNow}
+                                        </span>
+                                        <span className="text-4xl md:text-5xl lg:text-6xl font-black text-[#1e293b] dark:text-white tracking-tighter group-hover/phone:text-emerald-600 dark:group-hover/phone:text-[#ffd100] transition-colors whitespace-nowrap">
+                                            +43 1 256 18 22
+                                        </span>
+                                    </a>
 
                                     {/* Direct contact actions: Call + WhatsApp + Route */}
                                     <div className="flex flex-col sm:flex-row gap-3">
