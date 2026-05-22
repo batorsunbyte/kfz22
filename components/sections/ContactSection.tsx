@@ -59,16 +59,29 @@ export default function ContactSection() {
                             </div>
                         </div>
 
-                        {/* Trust Badge: Notdienst */}
-                        <div className="mt-8 pt-8 border-t border-slate-100 dark:border-slate-700 flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white shadow-lg shadow-red-500/20">
-                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
+                        {/* Trust Badges: Notdienst + Automatikgetriebe-Reparatur (2-spaltig) */}
+                        <div className="mt-8 pt-8 border-t border-slate-100 dark:border-slate-700 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="flex items-center gap-4">
+                                <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white shadow-lg shadow-red-500/20 flex-shrink-0">
+                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p className="text-[10px] font-black text-red-600 uppercase tracking-widest leading-none">{t.contact.emergency}</p>
+                                    <p className="text-slate-800 dark:text-slate-300 font-black text-sm uppercase">{t.contact.emergencyDesc}</p>
+                                </div>
                             </div>
-                            <div>
-                                <p className="text-[10px] font-black text-red-600 uppercase tracking-widest leading-none">{t.contact.emergency}</p>
-                                <p className="text-slate-800 dark:text-slate-300 font-black text-sm uppercase">{t.contact.emergencyDesc}</p>
+                            <div className="flex items-center gap-4">
+                                <div className="w-10 h-10 rounded-full bg-[#ffd100] flex items-center justify-center text-[#1e293b] shadow-lg shadow-yellow-500/20 flex-shrink-0">
+                                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p className="text-[10px] font-black text-amber-600 dark:text-[#ffd100] uppercase tracking-widest leading-none">Neuer Service</p>
+                                    <p className="text-slate-800 dark:text-slate-300 font-black text-sm uppercase leading-tight">Automatikgetriebe-Reparatur</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -129,18 +142,6 @@ export default function ContactSection() {
                                             </svg>
                                             WhatsApp
                                         </a>
-                                        <a
-                                            href={MAPS_URL}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex-1 flex items-center justify-center gap-2 border-2 border-[#1e293b] dark:border-[#ffd100] text-[#1e293b] dark:text-[#ffd100] py-4 rounded-2xl font-black text-sm uppercase tracking-widest transition-all duration-300 hover:bg-[#1e293b] hover:text-white dark:hover:bg-[#ffd100] dark:hover:text-slate-950 active:scale-[0.98]"
-                                        >
-                                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            </svg>
-                                            {t.callback.planRoute}
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -180,6 +181,20 @@ export default function ContactSection() {
                                     {t.contact.hoursNote}
                                 </p>
                             </div>
+
+                            {/* Route Planen CTA — Bottom der Öffnungszeiten-Card */}
+                            <a
+                                href={MAPS_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-6 flex items-center justify-center gap-2 border-2 border-[#1e293b] dark:border-[#ffd100] text-[#1e293b] dark:text-[#ffd100] py-4 rounded-2xl font-black text-sm uppercase tracking-widest transition-all duration-300 hover:bg-[#1e293b] hover:text-white dark:hover:bg-[#ffd100] dark:hover:text-slate-950 active:scale-[0.98] relative z-10"
+                            >
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                {t.callback.planRoute}
+                            </a>
                         </div>
                     </div>
                 </div>
