@@ -235,8 +235,8 @@ export default function ScrollCanvas3D() {
                                             NEU
                                         </div>
 
-                                        {/* Sticker - gold burst style with rotation */}
-                                        <div className="relative bg-gradient-to-br from-[#ffd100] via-yellow-400 to-amber-500 rounded-2xl px-4 py-3 lg:px-5 lg:py-3.5 shadow-[0_15px_35px_-5px_rgba(255,180,0,0.55)] transform rotate-6 group-hover/auto:rotate-0 group-hover/auto:scale-105 transition-all duration-500 border-2 border-white/70 overflow-hidden">
+                                        {/* Sticker - gold burst style, gerade ausgerichtet */}
+                                        <div className="relative bg-gradient-to-br from-[#ffd100] via-yellow-400 to-amber-500 rounded-2xl px-4 py-3 lg:px-5 lg:py-3.5 shadow-[0_15px_35px_-5px_rgba(255,180,0,0.55)] group-hover/auto:scale-105 transition-all duration-500 border-2 border-white/70 overflow-hidden">
                                             {/* Diagonal shine */}
                                             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/40 to-transparent -translate-x-full group-hover/auto:translate-x-full transition-transform duration-1000" />
 
