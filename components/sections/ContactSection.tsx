@@ -27,14 +27,61 @@ export default function ContactSection() {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+                <div className="space-y-8">
+                    {/* Reihe 1: Standort & Kontakt — full-width */}
+                    <div className="glass-card-3d p-8 md:p-10 rounded-[2rem] bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)] transition-all duration-500 hover:scale-[1.01]">
+                        <h3 className="text-xl font-black text-[#1e293b] dark:text-white mb-6 uppercase tracking-tight flex items-center gap-3">
+                            <span className="w-8 h-8 bg-emerald-50 dark:bg-slate-900 rounded-lg flex items-center justify-center text-emerald-600 dark:text-[#ffd100]">
+                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </span>
+                            {t.contact.locationContact}
+                        </h3>
+
+                        {/* 3-col grid on lg: Anschrift | Telefon | E-Mail. Notdienst-Trust-Badge unten */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                            <div className="group/item">
+                                <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{t.contact.addressLabel}</p>
+                                <p className="text-slate-700 dark:text-slate-300 font-bold leading-tight uppercase">
+                                    {t.contact.addressLine1}<br />
+                                    {t.contact.addressLine2}
+                                </p>
+                            </div>
+                            <div className="group/item">
+                                <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{t.contact.phone}</p>
+                                <a href="tel:012561822" className="text-slate-700 dark:text-slate-300 font-bold text-lg leading-tight transition-colors group-hover/item:text-emerald-600 dark:group-hover/item:text-[#ffd100] hover:underline">+43 1 256 18 22</a>
+                            </div>
+                            <div className="group/item">
+                                <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{t.contact.email}</p>
+                                <a href="mailto:office@kfz22.at" className="text-slate-700 dark:text-slate-300 font-bold text-sm leading-tight break-all transition-colors group-hover/item:text-emerald-600 dark:group-hover/item:text-[#ffd100] hover:underline">office@kfz22.at</a>
+                            </div>
+                        </div>
+
+                        {/* Trust Badge: Notdienst */}
+                        <div className="mt-8 pt-8 border-t border-slate-100 dark:border-slate-700 flex items-center gap-4">
+                            <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white shadow-lg shadow-red-500/20">
+                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p className="text-[10px] font-black text-red-600 uppercase tracking-widest leading-none">{t.contact.emergency}</p>
+                                <p className="text-slate-800 dark:text-slate-300 font-black text-sm uppercase">{t.contact.emergencyDesc}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Reihe 2: Anrufen (links) + Öffnungszeiten (rechts) */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
                     {/* Left Column: Direct Contact Buttons */}
-                    <div className="lg:col-span-7">
+                    <div>
                         <div className="relative group h-full">
                             {/* Visual Glow behind card */}
                             <div className="absolute -inset-4 bg-[#ffd100]/5 rounded-[3rem] blur-2xl -z-10 group-hover:bg-[#ffd100]/10 transition-colors" />
 
-                            <div className="relative overflow-hidden bg-white dark:bg-slate-900/50 border border-slate-200/80 dark:border-slate-800/80 rounded-[2.5rem] p-8 md:p-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] h-full flex flex-col">
+                            <div className="relative overflow-hidden bg-white dark:bg-slate-900/50 border border-slate-200/80 dark:border-slate-800/80 rounded-[2.5rem] p-8 md:p-10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] h-full flex flex-col">
                                 {/* Decorative gradient circles */}
                                 <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#ffd100]/20 rounded-full blur-3xl pointer-events-none" />
                                 <div className="absolute -bottom-32 -left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -100,57 +147,8 @@ export default function ContactSection() {
                         </div>
                     </div>
 
-                    {/* Right Column: Contact Details & Hours */}
-                    <div className="lg:col-span-5 space-y-8">
-                        {/* Status Card - 3D Pop */}
-                        <div className="glass-card-3d p-8 rounded-[2rem] bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)] transition-all duration-500 hover:scale-[1.02]">
-                            <h3 className="text-xl font-black text-[#1e293b] dark:text-white mb-6 uppercase tracking-tight flex items-center gap-3">
-                                <span className="w-8 h-8 bg-emerald-50 dark:bg-slate-900 rounded-lg flex items-center justify-center text-emerald-600 dark:text-[#ffd100]">
-                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                    </svg>
-                                </span>
-                                {t.contact.locationContact}
-                            </h3>
-
-                            <div className="space-y-6">
-                                <div className="group/item">
-                                    <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{t.contact.addressLabel}</p>
-                                    <p className="text-slate-700 dark:text-slate-300 font-bold leading-tight uppercase">
-                                        {t.contact.addressLine1}<br />
-                                        {t.contact.addressLine2}
-                                    </p>
-                                </div>
-
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div className="group/item">
-                                        <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{t.contact.phone}</p>
-                                        <a href="tel:012561822" className="text-slate-700 dark:text-slate-300 font-bold text-lg leading-tight transition-colors group-hover/item:text-emerald-600 dark:group-hover/item:text-[#ffd100] hover:underline">+43 1 256 18 22</a>
-                                    </div>
-                                    <div className="group/item">
-                                        <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{t.contact.email}</p>
-                                        <a href="mailto:office@kfz22.at" className="text-slate-700 dark:text-slate-300 font-bold text-sm leading-tight break-all transition-colors group-hover/item:text-emerald-600 dark:group-hover/item:text-[#ffd100] hover:underline">office@kfz22.at</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Trust Badge */}
-                            <div className="mt-8 pt-8 border-t border-slate-100 dark:border-slate-700 flex items-center gap-4">
-                                <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white shadow-lg shadow-red-500/20">
-                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p className="text-[10px] font-black text-red-600 uppercase tracking-widest leading-none">{t.contact.emergency}</p>
-                                    <p className="text-slate-800 dark:text-slate-300 font-black text-sm uppercase">{t.contact.emergencyDesc}</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Hours Card - 3D Depth */}
-                        <div className="p-10 rounded-[2rem] bg-white dark:bg-slate-950 border border-slate-200/80 dark:border-transparent shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08)] dark:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.4)] relative overflow-hidden group/hours transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_30px_50px_-15px_rgba(0,0,0,0.12)] dark:hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.5)]">
+                    {/* Right Column: Opening Hours Card */}
+                        <div className="p-8 md:p-10 rounded-[2rem] bg-white dark:bg-slate-950 border border-slate-200/80 dark:border-transparent shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08)] dark:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.4)] relative overflow-hidden group/hours transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_30px_50px_-15px_rgba(0,0,0,0.12)] dark:hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.5)] h-full flex flex-col">
                             {/* Artistic Pattern */}
                             <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 dark:bg-[#ffd100]/10 rounded-full blur-3xl -z-0 transition-transform group-hover/hours:scale-150" />
 
