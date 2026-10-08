@@ -273,7 +273,7 @@ const de = {
         contactHeading: 'Kontakt',
         phone247: 'Telefon 24/7',
         copyright: '© 2026 KFZ Technik 22. Alle Rechte vorbehalten.',
-        madeBy: 'Website gebaut und betreut von',
+        madeBy: 'Erstellt von',   // nur erstellt – kfz22.com wird nicht von SunByte betreut (Zakir, 08.10.2026)
         imprint: 'Impressum',
         privacy: 'Datenschutz',
     },

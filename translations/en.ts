@@ -275,7 +275,7 @@ const en: Translations = {
         contactHeading: 'Contact',
         phone247: 'Phone 24/7',
         copyright: '© 2026 KFZ Technik 22. All rights reserved.',
-        madeBy: 'Website built and maintained by',
+        madeBy: 'Created by',
         imprint: 'Legal Notice',
         privacy: 'Privacy Policy',
     },
