@@ -167,10 +167,11 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* SunByte credit */}
+                {/* SunByte credit — seit 08.10.2026 derselbe Satz wie auf allen SunByte-Seiten, mit Link (Zakir) */}
                 <div className="mt-6 text-center">
                     <p className="text-slate-300 dark:text-slate-600 text-[10px] font-bold uppercase tracking-[0.3em]">
-                        Made by <span className="text-emerald-600 dark:text-[#ffd100]">SunByte.AT</span>
+                        {t.footer.madeBy}{' '}
+                        <a href="https://sunbyte.at" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-[#ffd100] hover:underline">SunByte</a>, Wien
                     </p>
                 </div>
             </div>
