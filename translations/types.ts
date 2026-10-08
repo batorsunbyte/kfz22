@@ -193,6 +193,7 @@ export interface Translations {
         contactHeading: string
         phone247: string
         copyright: string
+        madeBy: string
         imprint: string
         privacy: string
     }
