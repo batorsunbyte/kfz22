@@ -171,7 +171,7 @@ export default function Footer() {
                 <div className="mt-6 text-center">
                     <p className="text-slate-300 dark:text-slate-600 text-[10px] font-bold uppercase tracking-[0.3em]">
                         {t.footer.madeBy}{' '}
-                        <a href="https://sunbyte.at" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-[#ffd100] hover:underline">SunByte</a>, Wien
+                        <a href="https://sunbyte.at/arbeiten/#kfz22" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-[#ffd100] hover:underline">SunByte</a>, Wien
                     </p>
                 </div>
             </div>
